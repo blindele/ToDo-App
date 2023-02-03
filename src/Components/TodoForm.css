@@ -1,25 +1,4 @@
 *{
-  margin:0;
-  padding: 0;
-
-}
-
-body {
-  background: hsla(55, 90%, 67%, 1);
-
-background: linear-gradient(90deg, hsla(55, 90%, 67%, 1) 0%, hsla(173, 87%, 59%, 1) 50%, hsla(327, 89%, 71%, 1) 100%);
-
-background: -moz-linear-gradient(90deg, hsla(55, 90%, 67%, 1) 0%, hsla(173, 87%, 59%, 1) 50%, hsla(327, 89%, 71%, 1) 100%);
-
-background: -webkit-linear-gradient(90deg, hsla(55, 90%, 67%, 1) 0%, hsla(173, 87%, 59%, 1) 50%, hsla(327, 89%, 71%, 1) 100%);
-
-filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#F7EA60", endColorstr="#3CF2DE", GradientType=1 );
-}
-
-
-todofrom.css
-
-*{
     margin: 0;
     padding: 0;
 }
@@ -65,7 +44,7 @@ body{
 }
 
 textarea[type="message"]{
-    font-size: 1.5rem;
+    font-size: 1rem;
     resize: none;
     height: 9rem;
 
