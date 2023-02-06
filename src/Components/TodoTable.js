@@ -6,13 +6,17 @@ import AddIcon from '@mui/icons-material/Add';
 import {Link} from 'react-router-dom'
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { updateTodo,deleteTodo } from "../actions";
+import {deleteTodo } from "../actions";
 
 const TodoTable = ({setTodoId}) => {
 const todoList = useSelector((state) => state.allReducers.todoList);
 const dispatch = useDispatch();
+
+
     return(
         <>
+        <Paper>
+
         <TableContainer component={Paper}>
             <Table sx={{minWidth:650}}>
                 <TableHead>
@@ -34,7 +38,7 @@ const dispatch = useDispatch();
     <TableCell>{elem.data.Task}</TableCell>
     <TableCell>{elem.data.Date}</TableCell>
     <TableCell>
-        <Link to="/">
+        <Link to="/form">
         <BorderColorIcon onClick={()=>setTodoId(elem.id)}/>
         </Link>
     </TableCell>
@@ -54,13 +58,14 @@ const dispatch = useDispatch();
             </Table>
 
         </TableContainer>
-        <Link to="/">
+        <Link to="/form">
         <Box display='flex' justifyContent='center' alignItems='center' component={Paper} mt={2} minHeight="2rem">
             <AddIcon/>
             ADD TODO
         </Box>
         
         </Link>
+        </Paper>
         </>
     )
 }

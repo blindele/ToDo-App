@@ -3,6 +3,7 @@ import { useDispatch} from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { addTodo, updateTodo } from '../actions';
 import "./TodoForm.css";
+import { Link } from 'react-router-dom';
 
 const TodoForm = ({todoId,setTodoId}) => {
 const [inputData,setInputData] = useState({
@@ -25,7 +26,7 @@ const dispatch = useDispatch()
                 dispatch(updateTodo(todoId,inputData))
             }
             clear();
-        navigate("/table")
+        navigate("/")
         }
     }
 
@@ -50,6 +51,9 @@ const dispatch = useDispatch()
             <textarea type="message" placeholder='Task' className='todo-input' name='Task' value={inputData.Task} onChange={handleChange}></textarea>
             <input type="date" placeholder='Date' className='todo-input' name='Date' value={inputData.Date} onChange={handleChange}></input>
             <button className='todo-button' onClick={handleSubmit}>{todoId ? "Update Todo" : "Add Todo"}</button>
+            <Link to={'/'}>
+                <button className='cancel-button'> Cancel</button>
+            </Link>
             </form>
 
         </div>

@@ -61,5 +61,15 @@ textarea[type="message"]::placeholder {
     border-radius: 3px;
     border: none;
     font-size: 1rem;
-    background-color: olivedrab;
+    background-color: green;
+}
+
+.cancel-button{
+    height: 3rem;
+    width: 18rem;
+    margin: 2rem;
+    border-radius: 3px;
+    border: none;
+    font-size: 1rem;
+    background-color: red;
 }
